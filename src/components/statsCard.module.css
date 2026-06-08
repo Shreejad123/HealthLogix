@@ -29,6 +29,17 @@
     grid-template-columns: 1fr;
     height: 80%;
     justify-content: center;
-    margin-left: 38%;
+    padding: 20px;
+    width: 100%;
+  }
+  .statsPatient,
+  .statsSugery {
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    height: 80%;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
   }
 }

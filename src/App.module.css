@@ -16,10 +16,9 @@ body {
 }
 .heroSection {
   display: flex;
-  justify-content: center;
-  place-items: center;
-  gap: 40px;
-  margin-top: 2%;
+  margin-left: auto;
+  width: 100%;
+  gap: 60px;
 }
 
 @media (max-width: 768px) {
@@ -28,7 +27,7 @@ body {
     padding: 10px;
     display: flex;
   }
-  .lineChart {
-    width: 50%;
+  .theme {
+    left: -20px;
   }
 }

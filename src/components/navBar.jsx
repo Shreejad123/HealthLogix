@@ -20,11 +20,14 @@ function NavBar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  console.log(click);
   return (
     <>
       <div className={styles.NavBar}>
         <h4 className={styles.header}>HealthLogix Dashboard</h4>
-        <ul className={`${styles.navOptions} ${click ? styles.active : ""}`}>
+        <ul
+          className={`${styles.navOptions} ${click ? styles.active : "navOptions"}`}
+        >
           <li>
             <span
               onClick={() => {
@@ -61,6 +64,7 @@ function NavBar() {
             <span
               onClick={() => {
                 handleLogout();
+                closeMobileMenu();
               }}
             >
               {" "}
@@ -70,7 +74,7 @@ function NavBar() {
         </ul>
       </div>
       <div className={styles.mobileMenu} onClick={handleClick}>
-        <h4 className={styles.heading}>HealthLogix Dashboard</h4>
+        {/* <h4 className={styles.heading}>HealthLogix Dashboard</h4> */}
         <img
           src={click ? CloseMenu : MenuIcon}
           alt="menu"

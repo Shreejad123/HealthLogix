@@ -24,7 +24,7 @@ function LoginForm() {
     localStorage.setItem("user", JSON.stringify(demoUser));
     localStorage.setItem("isLoggedIn", "true");
     setErrors({});
-    toast.success("logging in as demo user!", { autoClose: 1000 });
+    toast.success("logging in as demo user!", { autoClose: 500 });
     setTimeout(() => {
       navigate("/LandingPage");
     }, 2000);

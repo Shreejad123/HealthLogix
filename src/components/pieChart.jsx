@@ -21,19 +21,17 @@ function PieChart() {
     title: "Surgery Types",
   };
   return (
-    <div className={styles.chartSection}>
-      <h4 className={styles.header}>Surgeries Types</h4>
-      <div className={styles.Chart}>
+    <>
+      <div className={styles.charts}>
+        <h4 className={styles.header}>Surgeries Types</h4>
         <Chart
           chartType="PieChart"
           data={data}
           options={options}
-          width={"500px"}
-          height={"400px"}
-          className={styles.Chart}
+          className={styles.Chartsurgery}
         />
       </div>
-    </div>
+    </>
   );
 }
 

@@ -428,13 +428,11 @@ function LineChart() {
   ];
 
   return (
-    <div>
+    <div className={styles.container}>
       <h4 className={styles.header}>Weekly Surgeries Trend</h4>
 
       <Chart
         chartType="LineChart"
-        width="500px"
-        height="400px"
         data={chartData}
         options={options}
         className={styles.Chart}
