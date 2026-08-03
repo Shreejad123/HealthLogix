@@ -6,7 +6,7 @@ import loginImage from "../assets/doctorImage.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
-import Skeleton from "react-loading-skeleton"; // Popular choice: react-loading-skeleton
+import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { FaHandPointDown } from "react-icons/fa";
 function LoginForm() {
