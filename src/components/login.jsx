@@ -84,7 +84,7 @@ function LoginForm() {
             Explore the app without login &nbsp;
             <a href="#" onClick={viewDemo}>
               View Demo
-            </a>{" "}
+            </a>
           </p>
           <div className={styles.imageContainer}>
             {!loaded && <Skeleton className={styles.skeletonImage} />}

@@ -1,33 +1,61 @@
 import styles from "./footer.module.css";
+import { IoCartSharp } from "react-icons/io5";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 function Footer() {
   const navigate = useNavigate();
-  const handleLogout = () => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    localStorage.removeItem(isLoggedIn);
-    toast.success("Redirecting to login page!", { autoClose: 10000 });
-    setTimeout(() => {
-      navigate("/");
-    }, 2000);
-  };
 
   return (
-    <>
-      <article>
-        <footer className={styles.footer}>
-          <h5 className={styles.header}>All Quick Links</h5>
-          <ol className={styles.links}>
-            <li onClick={() => navigate("/LandingPage")}>Home</li>
-            <li onClick={() => navigate("/patientTable")}>Surgeries</li>
-            <li onClick={handleLogout}> Logout</li>
-          </ol>
-          <ToastContainer />
-        </footer>
-        {/* <p className={styles.hospital}>©Hospital Mangement 2026</p> */}
-      </article>
-    </>
+    <footer className={styles.footer}>
+      {/* Logo */}
+      <div className={styles.column}>
+        <h2 className={styles.logo} onClick={() => navigate("/")}>
+          HealthLogix
+        </h2>
+
+        <p>Patient and surgery management dashboard with analytics.</p>
+      </div>
+
+      {/* Links */}
+      <div className={styles.column}>
+        <h3>Quick Links</h3>
+
+        <p onClick={() => navigate("/LandingPage")}>Home</p>
+        <p onClick={() => navigate("/patientTable")}>Surgeries</p>
+        <p onClick={() => navigate("/")}>Logout</p>
+        {/* <p onClick={() => navigate("/wishlist")}>Signup</p> */}
+        <p onClick={() => navigate("/")}>Login</p>
+      </div>
+
+      {/* Social */}
+      <div className={styles.column}>
+        <h3>Follow Me</h3>
+
+        <p>
+          <a
+            href="https://github.com/Shreejad123"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+            &nbsp; Github
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="https://www.linkedin.com/in/shreeja-d-kotian-b4639a286/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+            &nbsp; LinkedIn
+          </a>
+        </p>
+      </div>
+    </footer>
   );
 }
+
 export default Footer;
