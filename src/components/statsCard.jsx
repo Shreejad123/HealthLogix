@@ -381,14 +381,14 @@ function StatsCard() {
   return (
     <div className={styles.statsCard}>
       <div className={styles.statsSugery}>
-        <h3>
+        <h3 className={styles.statsSugery_total}>
           <BsPeopleFill />
           Total Patients: {totalPatients}
         </h3>
       </div>
 
       <div className={styles.statsPatient}>
-        <h3>
+        <h3 className={styles.statsSugery_total}>
           <ImScissors />
           Total Surgeries: {totalSurgeries}
         </h3>

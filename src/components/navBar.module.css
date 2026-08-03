@@ -73,22 +73,24 @@ ul li span {
 
   .mobileMenu {
     display: flex;
+    width: 26px;
     position: absolute;
-    right: 15px;
+    right: 25px;
     top: 15px;
     cursor: pointer;
     height: 100%;
   }
 
   .menuIcon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    font-weight: 800;
   }
   .navOptions li span {
     font-size: 20px;
   }
   .header {
-    font-size: 20px;
+    font-size: 26px;
   }
   /* .navOptions {
     width: 100%;
