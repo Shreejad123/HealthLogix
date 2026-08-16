@@ -28,6 +28,7 @@ function LoginForm() {
       navigate("/LandingPage");
     }, 2000);
   };
+
   const validateForm = () => {
     const newErrors = {};
 
@@ -86,9 +87,7 @@ function LoginForm() {
             </a>
           </p>
           <div className={styles.imageContainer}>
-            {!loaded && (
-              <ProductDetailsSkeleton className={styles.skeletonImage} />
-            )}
+            {!loaded && <ProductDetailsSkeleton />}
             <img
               src={loginImage}
               alt="Background"

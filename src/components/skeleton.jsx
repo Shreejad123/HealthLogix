@@ -1,4 +1,4 @@
-import "./skeleton.module.css";
+import "./skeleton.css";
 const ProductDetailsSkeleton = () => {
   return (
     <>
