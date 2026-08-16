@@ -55,7 +55,9 @@ const PatientDetails = ({}) => {
           <MdDateRange className={styles.icon} />
           <div>
             <span className={styles.label}>Surgery Date:</span>
-            <span className={styles.value}>{patient.surgeryDate}</span>
+            <span className={styles.value}>
+              {patient.surgeryDate.split("-").reverse().join("-")}
+            </span>
           </div>
         </div>
 
@@ -69,9 +71,9 @@ const PatientDetails = ({}) => {
 
         <button
           className={styles.backButton}
-          onClick={() => navigate("/landingPage")}
+          onClick={() => navigate("/patientTable")}
         >
-          Back to Dashboard
+          Back to Surgeries page
         </button>
         <button
           className="btn btn-danger"

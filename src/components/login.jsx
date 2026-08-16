@@ -6,8 +6,7 @@ import loginImage from "../assets/doctorImage.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
+import ProductDetailsSkeleton from "./skeleton";
 import { FaHandPointDown } from "react-icons/fa";
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -87,7 +86,9 @@ function LoginForm() {
             </a>
           </p>
           <div className={styles.imageContainer}>
-            {!loaded && <Skeleton className={styles.skeletonImage} />}
+            {!loaded && (
+              <ProductDetailsSkeleton className={styles.skeletonImage} />
+            )}
             <img
               src={loginImage}
               alt="Background"

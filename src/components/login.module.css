@@ -10,7 +10,7 @@ body {
 .loginContainer {
   margin-left: 3.125vw;
   padding: 20px;
-  max-width: 46.875rem;
+  max-width: 40.875rem;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -86,9 +86,13 @@ body {
 }
 .loginForm {
   margin-top: 5%;
+  margin-left: 1vw;
 }
 .loginHeaders {
-  text-align: center;
+  margin-left: 12vw;
+}
+p a {
+  color: blue;
 }
 .skeletonImage {
   position: relative;
