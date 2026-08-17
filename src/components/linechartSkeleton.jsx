@@ -1,4 +1,4 @@
-import styles from "./LineChartSkeleton.module.css";
+import styles from "./lineChartSkeleton.module.css";
 
 function LineChartSkeleton() {
   return (
