@@ -1,4 +1,4 @@
-import styles from "./PieChartSkeleton.module.css";
+import styles from "./piechartSkeleton.module.css";
 
 function PieChartSkeleton() {
   return (
