@@ -1,0 +1,100 @@
+.container {
+  height: 350px;
+  display: flex;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.yAxis {
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 35px;
+}
+
+.yAxis span {
+  width: 18px;
+  height: 10px;
+  border-radius: 3px;
+  background: #e5e7eb;
+  animation: pulse 1.5s infinite;
+}
+
+.chartArea {
+  position: relative;
+  flex: 1;
+  border-left: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.gridLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.gridLine:nth-child(1) {
+  top: 0;
+}
+
+.gridLine:nth-child(2) {
+  top: 25%;
+}
+
+.gridLine:nth-child(3) {
+  top: 50%;
+}
+
+.gridLine:nth-child(4) {
+  top: 75%;
+}
+
+.gridLine:nth-child(5) {
+  bottom: 0;
+}
+
+/* Fake line */
+.fakeLine {
+  position: absolute;
+  width: 70%;
+  height: 4px;
+  background: #e5e7eb;
+  top: 50%;
+  left: 10%;
+  transform: rotate(-8deg);
+  animation: pulse 1.5s infinite;
+}
+
+.xAxis {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.xAxis span {
+  width: 25px;
+  height: 10px;
+  border-radius: 3px;
+  background: #e5e7eb;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}

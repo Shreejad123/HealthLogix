@@ -91,7 +91,7 @@ body {
 .loginHeaders {
   margin-left: 12vw;
 }
-p a {
+.loginHeaders a {
   color: blue;
 }
 .skeletonImage {

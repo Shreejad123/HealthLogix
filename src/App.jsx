@@ -6,7 +6,6 @@ const PieChart = lazy(() => import("./components/pieChart"));
 import StatsCard from "./components/statsCard";
 import ThemeToggleButton from "./components/ThemeToggleButton";
 import Footer from "./components/Footer";
-import { ClipLoader } from "react-spinners";
 function LandingPage() {
   return (
     <>
@@ -18,20 +17,13 @@ function LandingPage() {
         </div>
       </div>
       <div className={styles.heroSection}>
-        <Suspense
-          fallback={
-            <h2>
-              {" "}
-              <div>
-                <ClipLoader />
-              </div>
-              Loading ...
-            </h2>
-          }
-        >
-          <LineChart className={styles.lineChart}></LineChart>
-          <PieChart></PieChart>
-        </Suspense>
+        <h2>
+          {" "}
+          <div></div>
+        </h2>
+
+        <LineChart className={styles.lineChart}></LineChart>
+        <PieChart></PieChart>
       </div>
 
       <Footer />

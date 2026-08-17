@@ -1,7 +1,9 @@
 import { Chart } from "react-google-charts";
 import styles from "./lineChart.module.css";
-
+import { useState } from "react";
+import LineChartSkeleton from "./linechartSkeleton";
 function LineChart() {
+  const [loaded, setLoaded] = useState(false);
   // const demoData = [
   //   {
   //     patientFullName: "Aarav Sharma",
@@ -430,13 +432,22 @@ function LineChart() {
   return (
     <div className={styles.container}>
       <h4 className={styles.header}>Weekly Surgeries Trend</h4>
+      {!loaded && <LineChartSkeleton />}
 
-      <Chart
-        chartType="LineChart"
-        data={chartData}
-        options={options}
-        className={styles.Chart}
-      />
+      <>
+        <Chart
+          chartType="LineChart"
+          data={chartData}
+          options={options}
+          className={styles.Chart}
+          chartEvents={[
+            {
+              eventName: "ready",
+              callback: () => setLoaded(true),
+            },
+          ]}
+        />
+      </>
     </div>
   );
 }

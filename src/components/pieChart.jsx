@@ -1,6 +1,9 @@
 import { Chart } from "react-google-charts";
 import styles from "./pieChart.module.css";
+import { useState } from "react";
+import PieChartSkeleton from "./PieChartSkeleton";
 function PieChart() {
+  const [loaded, setLoaded] = useState(false);
   const surgeries = JSON.parse(localStorage.getItem("surgeryList")) || [];
   console.log("surgeries", surgeries);
   const counts = {};
@@ -24,11 +27,18 @@ function PieChart() {
     <>
       <div className={styles.charts}>
         <h4 className={styles.header}>Surgeries Types</h4>
+        {!loaded && <PieChartSkeleton />}
         <Chart
           chartType="PieChart"
           data={data}
           options={options}
           className={styles.Chartsurgery}
+          chartEvents={[
+            {
+              eventName: "ready",
+              callback: () => setLoaded(true),
+            },
+          ]}
         />
       </div>
     </>
