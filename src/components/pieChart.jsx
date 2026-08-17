@@ -1,7 +1,7 @@
 import { Chart } from "react-google-charts";
 import styles from "./pieChart.module.css";
 import { useState } from "react";
-import PieChartSkeleton from "./PiechartSkeleton";
+import PieChartSkeleton from "./piechartSkeleton";
 function PieChart() {
   const [loaded, setLoaded] = useState(false);
   const surgeries = JSON.parse(localStorage.getItem("surgeryList")) || [];
