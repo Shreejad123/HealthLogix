@@ -10,13 +10,15 @@ const EditSurgery = () => {
   const { index } = useParams();
   const navigate = useNavigate();
 
-  const [surgeryList, setSurgeryList] = useState([]);
   const [surgery, setSurgery] = useState({
     patientFullName: "",
     patientNumber: "",
     phoneNumber: "",
+    surgeryType: "",
     surgeryDate: "",
   });
+
+  const [surgeryList, setSurgeryList] = useState([]);
 
   const convertToInputDate = (dateString) => {
     if (!dateString) return "";
@@ -34,9 +36,7 @@ const EditSurgery = () => {
       const selected = list[index];
       if (selected) {
         selected.surgeryDate = convertToInputDate(selected.surgeryDate);
-        selected.stentRemovalDate = convertToInputDate(
-          selected.stentRemovalDate,
-        );
+
         setSurgery(selected);
       }
     }
@@ -58,6 +58,7 @@ const EditSurgery = () => {
 
     setSurgeryList(updatedList);
     localStorage.setItem("surgeryList", JSON.stringify(updatedList));
+    console.log(updatedList, "updatedListedit");
     toast.success("surgery details updated sucessfully!", { autoClose: 1000 });
     setTimeout(() => {
       navigate("/patientTable");
@@ -100,8 +101,12 @@ const EditSurgery = () => {
             </div>
             <div className>
               <label>Type of Surgery:</label>
-              <select onChange={(e) => setSurgery(e.target.value)}>
-                <option value="" disabled="disabled">
+              <select
+                name="surgery"
+                value={surgery.surgery}
+                onChange={handleChange}
+              >
+                <option value="" disabled>
                   Select the Surgery
                 </option>
                 <option value="Cardiac">Cardiac</option>
