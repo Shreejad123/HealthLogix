@@ -22,6 +22,12 @@
   justify-content: center;
   margin-top: 2rem;
 }
+.statsSugery:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+.statsPatient:hover {
+  transform: scale(1.05) translateY(-5px);
+}
 @media (max-width: 768px) {
   .statsCard {
     display: grid;

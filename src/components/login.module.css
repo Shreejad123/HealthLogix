@@ -49,7 +49,10 @@ body {
   border-color: #006241;
 }
 .signup {
-  margin-left: 5%;
+  margin-left: 15%;
+}
+.signup a {
+  color: blue;
 }
 .header {
   text-align: center;
@@ -60,6 +63,7 @@ body {
 }
 .email,
 .password {
+  position: relative;
   margin-bottom: 10px;
 }
 .loginBtn {
@@ -76,8 +80,22 @@ body {
 
 .loginHeader {
   text-align: center;
-
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding-bottom: 5px;
+  margin-left: 13vw;
+}
+.inputIcon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.heartIcon {
+  color: darkblue;
 }
 .header {
   text-align: left;
@@ -105,6 +123,7 @@ body {
   overflow: hidden;
   background-color: #dcdcdc;
 }
+
 .branding {
   position: relative;
   width: 100%;

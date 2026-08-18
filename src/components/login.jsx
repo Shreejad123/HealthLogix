@@ -8,6 +8,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import ProductDetailsSkeleton from "./skeleton";
 import { FaHandPointDown } from "react-icons/fa";
+import { FaHeartPulse } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -79,7 +81,10 @@ function LoginForm() {
     <div>
       <div id="loginView" className={styles.loginContainer}>
         <div className={styles.branding}>
-          <h3 className={styles.loginHeader}>HealthLogix </h3>
+          <h3 className={styles.loginHeader}>
+            HealthLogix
+            <FaHeartPulse className={styles.heartIcon} />
+          </h3>
           <p className={styles.loginHeaders}>
             Explore the app without login &nbsp;
             <a href="#" onClick={viewDemo}>
@@ -101,6 +106,7 @@ function LoginForm() {
             <h4 className={styles.header}>Login</h4>
             <div>
               <div className={styles.email}>
+                {/* <MdEmail className={styles.inputIcon} /> */}
                 <input
                   type="email"
                   placeholder="Enter your email"
