@@ -25,8 +25,17 @@
   width: 80%;
   border-radius: 8px;
   height: 60%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5%;
 }
-
+.icons {
+  margin: 15%;
+  display: flex;
+  column-gap: 15%;
+  color: darkblue;
+  border-radius: 50%;
+}
 .input {
   flex: 1;
   display: flex;
@@ -34,10 +43,10 @@
   gap: 10px;
 }
 .user_details {
-  gap: 0px;
   width: 60%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  column-gap: 0px;
+  grid-template-columns: 0.8fr 1fr;
 
   padding: 10px;
   margin: 0 auto;

@@ -7,6 +7,9 @@ import "react-toastify/dist/ReactToastify.css";
 import loginImage from "../assets/doctorRegister.jpg";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { FaHeartPulse } from "react-icons/fa6";
+import { GrSecure } from "react-icons/gr";
 const Registration = () => {
   const navigate = useNavigate();
 
@@ -161,6 +164,11 @@ const Registration = () => {
             className={styles.image}
             onLoad={() => setLoaded(true)}
           />
+          <div className={styles.icons}>
+            <BsFillPeopleFill size={40} />
+            <FaHeartPulse size={40} />
+            <GrSecure size={40} />
+          </div>
         </div>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.user_form}>
